@@ -77,3 +77,52 @@ readme_file = open("README.md", "r")
 print(readme_file.readable())
 
 readme_file.close()
+
+
+class Student:
+
+    def __init__(self, name, major, gpa, is_on_probation):
+        self.name = name
+        self.major = major
+        self.gpa = gpa
+        self.is_on_probation = is_on_probation
+
+    def on_honor_roll(self):
+        if self.gpa >= 3.5:
+            return True
+        else:
+            return False
+
+
+student1 = Student("Jim", "Business", 3.1, False)
+student2 = Student("Pam", "Art", 3.5, True)
+print(student1.gpa)
+print(student2.on_honor_roll())
+
+
+class Chef:
+    def make_chicken(self):
+        print("The chef made chicken")
+
+    def make_salad(self):
+        print("the chef makes a salad")
+
+    def make_special_dish(self):
+        print("The chef made bbq ribs")
+
+
+my_chef = Chef()
+my_chef.make_special_dish()
+
+
+class Chinese_Chef(Chef):
+
+    def make_special_dish(self):
+        print("The chef made orange chicken")
+
+    def make_fried_rice(self):
+        print("The chef made fried rice")
+
+
+my_chinese_chef = Chinese_Chef()
+my_chinese_chef.make_special_dish()
